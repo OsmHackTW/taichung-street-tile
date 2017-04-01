@@ -18,12 +18,13 @@ Tile server:
 
 ## Installation
 
-For Linux, install recent version of Docker and Docker Compose.
+Download and unzip address CSV file from <http://gishub.taichung.gov.tw/>,
+then copy `TGOS_66.CSV` into the `db/data` folder, renaming to `data.csv`.
 
 Run `docker-compose up` to build Docker images and lanuch both
 the database and tile container.
 
-Now, open another terminal, run the following command to import stops:
+Now, open another terminal, run the following command to import addresses:
 
     docker-compose run db python /process.py
 
@@ -34,9 +35,3 @@ in JOSM like the following to get started:
 
     wmts:http://127.0.0.1:8888/wmts/1.0.0/WMTSCapabilities.xml
 
---------------------
-
-For Windows or Mac user, you can install Docker Toolbox from Docker
-official website, and use Docker Quickstart Terminal to execute same
-commands. Remember you should change the IP address to the Docker Machine
-IP, like replace `127.0.0.1` to `192.168.99.100`.

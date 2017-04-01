@@ -1,8 +1,8 @@
 {
-  "name": "NTPC Bus Stop Tile",
-  "description": "A tile to help importing bus data from New Taipei City",
-  "minzoom": 14,
-  "maxzoom": 19,
+  "name": "Taichung address data",
+  "description": "Street group from Taichung addresses data",
+  "minzoom": 12,
+  "maxzoom": 22,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "bounds": [
    -180, -180, 180, 180
@@ -19,14 +19,14 @@
   ],
   "Layer": [
     {
-      "name": "stops",
+      "name": "addresses",
       "geometry": "marker",
-      "id": "stops",
+      "id": "addresses",
       "class": "",
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "Datasource": {
-        "table": "ntpc_stops",
+        "table": "taichung_addresses",
         "type": "postgis",
         "geometry_field": "location",
         "key_field": "",
@@ -36,16 +36,33 @@
       }
     },
     {
-      "name": "stop-group",
+      "name": "streets-poly",
       "geometry": "polygon",
-      "id": "stop-group",
+      "id": "streets-group",
       "class": "",
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "Datasource": {
-        "table": "ntpc_stop_group",
+        "table": "taichung_streets_group",
         "type": "postgis",
-        "geometry_field": "convex_hull",
+        "geometry_field": "polygon",
+        "key_field": "",
+        "host": "db",
+        "user": "postgres",
+        "dbname": "postgres"
+      }
+    },
+    {
+      "name": "streets-axis",
+      "geometry": "linestring",
+      "id": "streets-group",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "Datasource": {
+        "table": "taichung_streets_group",
+        "type": "postgis",
+        "geometry_field": "axis",
         "key_field": "",
         "host": "db",
         "user": "postgres",
