@@ -68,12 +68,13 @@ def write_data(csvfile, conn):
             "UPDATE taichung_streets_group SET polygon = "
             "TCTile_RealPointsToPolygon(points) WHERE ST_NPoints(points) >= 100;"
         )
-        # Optimize as pgr_PointsAsPolygon sucks at huge amount of small set. 
+        # Optimize as pgr_PointsAsPolygon sucks at huge amount of small set.
+        # Sometimes (2 as previously run) the below would fail, so try again.
         print "Calaulating Concave Hull for < 100 points..."
         cur.execute(
             "UPDATE taichung_streets_group SET polygon = "
             "ST_SimplifyPreserveTopology(ST_SmartConcaveHull(points, 0.99, true), 0.05) "
-            "WHERE ST_NPoints(points) < 100;"
+            "WHERE polygon IS NULL;"
         )
         # https://github.com/Oslandia/SFCGAL/issues/133
         print "Preparing Medial axis..."
