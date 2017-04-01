@@ -76,12 +76,6 @@ def write_data(csvfile, conn):
             "ST_SimplifyPreserveTopology(ST_SmartConcaveHull(points, 0.99, true), 0.05) "
             "WHERE polygon IS NULL;"
         )
-        # To ensure everything is polygon...
-        print "Adding buffers..."
-        cur.execute(
-            "UPDATE taichung_streets_group SET polygon = "
-            "ST_Buffer(polygon, 0.0001);"
-        )
         # https://github.com/Oslandia/SFCGAL/issues/133
         print "Preparing Medial axis..."
         cur.execute(
