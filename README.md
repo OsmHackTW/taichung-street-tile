@@ -1,7 +1,7 @@
 # Taichung City Street Tile
 
 A total solution tile generator using Docker Compose,
-for generating tile from New Taipei City bus stops data.
+for detecting streets then generating tile from Taichung City address data.
 
 Database:
 
@@ -35,6 +35,21 @@ in JOSM like the following to get started:
 
     wmts:http://127.0.0.1:8888/wmts/1.0.0/WMTSCapabilities.xml
 
+
+## Tips
+
+Dump the data with:
+
+    docker-compose run db bash
+    pg_dump --data-only -h db -U postgres postgres > /data/dump.sql
+    exit
+
+
+Generate the SHP:
+
+    docker-compose run db bash
+    pgsql2shp -f /data/group.shp -h db -u postgres postgres "SELECT street, ST_Buffer(polygon, 0.0001) FROM taichung_streets_group;"
+    exit
 
 ## License
 
