@@ -5,8 +5,8 @@ for generating tile from New Taipei City bus stops data.
 
 Database:
 
-* PostgreSQL 9.5
-* PostGIS 2.2
+* PostgreSQL 9.6
+* PostGIS 2.3
 * Python
 
 Tile server:
