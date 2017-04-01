@@ -48,7 +48,7 @@ $$
     RETURN var_resultgeom;
   EXCEPTION WHEN OTHERS THEN
     -- It usually happens when real points are less than 3
-    RETURN ST_ConvexHull(param_points);
+    RETURN ST_Buffer(ST_ConvexHull(param_points), 0.0001);
   END;
 $$ LANGUAGE plpgsql VOLATILE STRICT;
 ALTER FUNCTION TCTile_RealPointsToPolygon(geometry) OWNER TO postgres;
