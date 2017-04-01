@@ -24,6 +24,9 @@ CREATE TABLE taichung_streets_group (
   "axis" geometry
 );
 
+CREATE INDEX polygon_idx ON taichung_streets_group USING GIST ("polygon");
+CREATE INDEX axis_idx ON taichung_streets_group USING GIST ("axis");
+
 CREATE TABLE real_points_to_polygon_temp (
   id integer,
   x float,
