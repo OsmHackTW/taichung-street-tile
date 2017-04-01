@@ -1,4 +1,4 @@
-# ntpc-bus-stop-tile
+# Taichung City Street Tile
 
 A total solution tile generator using Docker Compose,
 for generating tile from New Taipei City bus stops data.
@@ -35,3 +35,7 @@ in JOSM like the following to get started:
 
     wmts:http://127.0.0.1:8888/wmts/1.0.0/WMTSCapabilities.xml
 
+
+## License
+
+Code under MIT
