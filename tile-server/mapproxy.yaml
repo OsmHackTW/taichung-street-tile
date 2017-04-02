@@ -1,6 +1,11 @@
 services:
   wmts:
 
+grids:
+  my_grids:
+    base: GLOBAL_WEBMERCATOR
+    num_levels: 21
+
 layers:
   - name: street 
     title: Street
@@ -8,7 +13,7 @@ layers:
 
 caches:
   mnc:
-    grids: [GLOBAL_WEBMERCATOR]
+    grids: [my_grids]
     sources: [mn]
 
 sources:
