@@ -4,6 +4,8 @@ tile-server:
     - "8888:8080"
   links:
     - db
+  volumes:
+    - ./tile-server/cache_data:/cache_data
 
 db:
   build: ./db
