@@ -86,7 +86,7 @@ def write_data(csvfile, conn):
 
 
 with open('/data/data.csv', 'rb') as csvfile, \
-     psycopg2.connect(dbname="postgres", user="postgres", host="db") \
+     psycopg2.connect(dbname="tile_db", user="tile_db", host="db") \
      as conn:
     print "Writing..."
     write_data(csvfile, conn)

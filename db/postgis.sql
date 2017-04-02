@@ -51,7 +51,7 @@ $$
     RETURN ST_ConvexHull(param_points);
   END;
 $$ LANGUAGE plpgsql VOLATILE STRICT;
-ALTER FUNCTION TCTile_RealPointsToPolygon(geometry) OWNER TO postgres;
+ALTER FUNCTION TCTile_RealPointsToPolygon(geometry) OWNER TO tile_db;
 
 -- http://gis.stackexchange.com/questions/106854/
 CREATE OR REPLACE FUNCTION ST_SmartConcaveHull(
@@ -68,7 +68,7 @@ $$
     return ST_ConvexHull(param_geom);
   END;
 $$ LANGUAGE plpgsql IMMUTABLE STRICT;
-ALTER FUNCTION ST_SmartConcaveHull(geometry, float, boolean) OWNER TO postgres;
+ALTER FUNCTION ST_SmartConcaveHull(geometry, float, boolean) OWNER TO tile_db;
 
 CREATE OR REPLACE FUNCTION ST_SmartApproximateMedialAxis(
   param_geom geometry) RETURNS geometry AS
@@ -77,5 +77,7 @@ $$
   EXCEPTION WHEN OTHERS THEN RETURN NULL;
   END;
 $$ LANGUAGE plpgsql IMMUTABLE STRICT;
-ALTER FUNCTION ST_SmartApproximateMedialAxis(geometry) OWNER TO postgres;
+ALTER FUNCTION ST_SmartApproximateMedialAxis(geometry) OWNER TO tile_db;
 
+-- Don't connect as superuser...
+ALTER ROLE tile_db NOSUPERUSER;

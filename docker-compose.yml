@@ -11,3 +11,6 @@ db:
   build: ./db
   volumes:
     - ./db/data:/data
+  environment:
+    - POSTGRES_DB=tile_db
+    - POSTGRES_USER=tile_db

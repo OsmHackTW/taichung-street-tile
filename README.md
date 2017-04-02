@@ -41,14 +41,14 @@ in JOSM like the following to get started:
 Dump the data with:
 
     docker-compose run db bash
-    pg_dump --data-only -h db -U postgres postgres > /data/dump.sql
+    pg_dump --data-only -h db -U tile_db tile_db > /data/dump.sql
     exit
 
 
 Generate the SHP:
 
     docker-compose run db bash
-    pgsql2shp -f /data/group.shp -h db -u postgres postgres "SELECT street, ST_Buffer(polygon, 0.0001) FROM taichung_streets_group;"
+    pgsql2shp -f /data/group.shp -h db -u tile_db tile_db "SELECT street, ST_Buffer(polygon, 0.0001) FROM taichung_streets_group;"
     exit
 
 ## License

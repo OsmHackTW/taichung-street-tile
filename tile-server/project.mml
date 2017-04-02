@@ -31,8 +31,8 @@
         "geometry_field": "location",
         "key_field": "",
         "host": "db",
-        "user": "postgres",
-        "dbname": "postgres"
+        "user": "tile_db",
+        "dbname": "tile_db"
       }
     },
     {
@@ -48,8 +48,8 @@
         "geometry_field": "polygon",
         "key_field": "",
         "host": "db",
-        "user": "postgres",
-        "dbname": "postgres"
+        "user": "tile_db",
+        "dbname": "tile_db"
       }
     },
     {
@@ -65,8 +65,8 @@
         "geometry_field": "axis",
         "key_field": "",
         "host": "db",
-        "user": "postgres",
-        "dbname": "postgres"
+        "user": "tile_db",
+        "dbname": "tile_db"
       }
     }
   ],
