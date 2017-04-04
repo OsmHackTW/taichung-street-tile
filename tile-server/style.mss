@@ -11,7 +11,7 @@ Map {
 #addresses[zoom>=19] {
   text-name: [housenumber];
   text-face-name: 'Noto Sans CJK TC Regular';
-  text-file: #FFFFFF;
+  text-fill: #FFFFFF;
   text-size: 6;
   text-allow-overlap: true;
 }
