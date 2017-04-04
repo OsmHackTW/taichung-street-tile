@@ -16,7 +16,8 @@ Map {
   line-color: #CCCCCC;
   text-name: [street];
   text-face-name: 'Noto Sans CJK TC Regular';
-  text-size: 12;
+  text-placement-type: simple;
+  text-placements: "N,S,E,W,NE,SE,NW,SW,16,14,12,10,8";
   text-fill: #CCCCCC;
 }
 #streets-axis {
