@@ -25,6 +25,6 @@ Map {
   text-name: [street];
   text-face-name: 'Noto Sans CJK TC Regular';
   text-size: 12;
-  text-fill: #666666;
+  text-fill: #222222;
   text-placement: line;
 }
