@@ -1,5 +1,6 @@
 services:
-  wmts:
+  tms:
+    use_grid_names: true
 
 grids:
   my_grids:
