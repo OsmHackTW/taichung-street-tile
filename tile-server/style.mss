@@ -18,6 +18,7 @@ Map {
   text-face-name: 'Noto Sans CJK TC Regular';
   text-placement-type: simple;
   text-placements: "N,S,E,W,NE,SE,NW,SW,16,14,12,10";
+  text-allow-overlap: true;
   text-fill: #CCCCCC;
 }
 #streets-axis {
@@ -28,4 +29,5 @@ Map {
   text-size: 12;
   text-fill: #222222;
   text-placement: line;
+  text-allow-overlap: true;
 }
