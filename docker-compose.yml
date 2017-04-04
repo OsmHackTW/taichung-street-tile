@@ -1,16 +1,18 @@
 tile-server:
   build: ./tile-server
-  ports:
-    - "8888:8080"
   links:
     - db
   volumes:
-    - ./tile-server/cache_data:/cache_data
+    - /mnt/cache_data:/cache_data
 
 db:
   build: ./db
   volumes:
-    - ./db/data:/data
+    - /mnt/db_data:/var/lib/postgresql/data
   environment:
+    - PGDATA=/var/lib/postgresql/data/pgdata
     - POSTGRES_DB=tile_db
     - POSTGRES_USER=tile_db
+
+osmtm:
+  build: ./osmtm
