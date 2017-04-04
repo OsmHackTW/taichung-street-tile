@@ -4,7 +4,7 @@ services:
 grids:
   my_grids:
     base: GLOBAL_WEBMERCATOR
-    num_levels: 22
+    num_levels: 23
 
 layers:
   - name: street 
