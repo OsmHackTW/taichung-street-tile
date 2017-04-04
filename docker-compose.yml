@@ -4,6 +4,8 @@ tile-server:
     - db
   volumes:
     - /mnt/cache_data:/cache_data
+  ports:
+    - "127.0.0.1:8787:8080"
 
 db:
   build: ./db
@@ -16,3 +18,7 @@ db:
 
 osmtm:
   build: ./osmtm
+  links:
+    - db
+  ports:
+    - "127.0.0.1:8788:80"
