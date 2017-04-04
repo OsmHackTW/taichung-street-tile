@@ -24,7 +24,8 @@ Map {
   text-name: [street];
   text-face-name: 'Noto Sans CJK TC Regular';
   text-placement-type: simple;
-  text-placements: "N,S,E,W,NE,SE,NW,SW,18,16,14";
+  text-placements: "N,S,E,W,NE,SE,NW,SW,16,14,12,10";
+  text-size: 18;
   text-allow-overlap: true;
   text-fill: #CCCCCC;
 }
