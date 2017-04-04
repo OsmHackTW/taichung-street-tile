@@ -15,6 +15,9 @@ Map {
   text-size: 10;
   text-allow-overlap: true;
 }
+#addresses[zoom>=20] {
+  text-size: 12;
+}
 
 #streets-poly {
   polygon-fill: #FAFFFF;
