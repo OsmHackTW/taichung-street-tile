@@ -2,11 +2,18 @@ Map {
   background-color: transparent;
 }
 
-#addresses {
+#addresses[zoom<=18] {
   marker-width: 3;
   marker-fill: #00FF00;
   marker-line-color: #FFFFFF;
   marker-allow-overlap: true;
+}
+#addresses[zoom>=19] {
+  text-name: [housenumber];
+  text-face-name: 'Noto Sans CJK TC Regular';
+  text-file: #FFFFFF;
+  text-size: 6;
+  text-allow-overlap: true;
 }
 
 #streets-poly {

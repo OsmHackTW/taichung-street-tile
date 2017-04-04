@@ -19,7 +19,7 @@ def write_data(csvfile, conn):
     for row in reader:
         street = u'%s%s%s%s' % (
             row[u'街、路段'], row[u'地區'], row[u'巷'], row[u'弄'])
-        housenumber = row[u'號']
+        housenumber = re.sub(ur'\u865f.*', '', row[u'號'])
         x = row[u'橫座標']
         y = row[u'縱座標']
         # http://stackoverflow.com/questions/2422177/
