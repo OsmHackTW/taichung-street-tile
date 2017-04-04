@@ -12,7 +12,7 @@ Map {
   text-name: [housenumber];
   text-face-name: 'Noto Sans CJK TC Regular';
   text-fill: #BBBBBB;
-  text-size: 8;
+  text-size: 10;
   text-allow-overlap: true;
 }
 
@@ -24,7 +24,7 @@ Map {
   text-name: [street];
   text-face-name: 'Noto Sans CJK TC Regular';
   text-placement-type: simple;
-  text-placements: "N,S,E,W,NE,SE,NW,SW,16,14,12";
+  text-placements: "N,S,E,W,NE,SE,NW,SW,18,16,14";
   text-allow-overlap: true;
   text-fill: #CCCCCC;
 }
@@ -33,7 +33,7 @@ Map {
   line-color: #333333;
   text-name: [street];
   text-face-name: 'Noto Sans CJK TC Regular';
-  text-size: 12;
+  text-size: 14;
   text-fill: #222222;
   text-placement: line;
   text-allow-overlap: true;
