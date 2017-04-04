@@ -73,7 +73,7 @@ def write_data(csvfile, conn):
         print "Calaulating Concave Hull for < 100 points..."
         cur.execute(
             "UPDATE taichung_streets_group SET polygon = "
-            "ST_SimplifyPreserveTopology(ST_SmartConcaveHull(points, 0.99, true), 0.05) "
+            "ST_SimplifyPreserveTopology(ST_Buffer(ST_SmartConcaveHull(points, 0.99, true), 0.0001), 0.05) "
             "WHERE polygon IS NULL;"
         )
         # https://github.com/Oslandia/SFCGAL/issues/133
