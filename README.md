@@ -30,10 +30,10 @@ Now, open another terminal, run the following command to import addresses:
 
 It may take several minutes, so be patient :)
 
-Now a WMTS server will be ready at port `8888`. You can append an entry
+Now a WMTS server will be ready at port `8787`. You can append an entry
 in JOSM like the following to get started:
 
-    wmts:http://127.0.0.1:8888/wmts/1.0.0/WMTSCapabilities.xml
+    wmts:http://127.0.0.1:8787/wmts/1.0.0/WMTSCapabilities.xml
 
 
 ## Tips
