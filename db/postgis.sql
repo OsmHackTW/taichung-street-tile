@@ -2,6 +2,9 @@ CREATE EXTENSION postgis;
 CREATE EXTENSION postgis_sfcgal;
 CREATE EXTENSION pgrouting;
 
+ALTER SYSTEM SET work_mem='64MB';
+ALTER SYSTEM SET maintenance_work_mem='256MB';
+
 -- For debug purprose
 SELECT postgis_full_version();
 
