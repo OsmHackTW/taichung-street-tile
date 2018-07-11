@@ -38,7 +38,7 @@
     {
       "name": "streets-poly",
       "geometry": "polygon",
-      "id": "streets-group",
+      "id": "streets-poly",
       "class": "",
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
@@ -55,7 +55,7 @@
     {
       "name": "streets-axis",
       "geometry": "linestring",
-      "id": "streets-group",
+      "id": "streets-axis",
       "class": "",
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
