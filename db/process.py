@@ -22,8 +22,8 @@ def write_data(csvfile, conn):
         street = u'%s%s%s%s' % (
             row[u'街、路段'], row[u'地區'], row[u'巷'], row[u'弄'])
         housenumber = re.sub(ur'\u865f.*', '', row[u'號'])
-        x = row[u'97橫坐標']
-        y = row[u'97縱坐標']
+        x = row[u'tm2x97橫座標']
+        y = row[u'tm2x97縱座標']
         # http://stackoverflow.com/questions/2422177/
         street = unicodedata.normalize('NFKC', street)
         housenumber = unicodedata.normalize('NFKC', housenumber)
