@@ -5,9 +5,9 @@ for detecting streets then generating tile from Taichung City address data.
 
 Database:
 
-* PostgreSQL 9.6
-* PostGIS 2.3
-* Python
+* PostgreSQL 10
+* PostGIS 2.4
+* Python 2.7
 
 Tile server:
 
