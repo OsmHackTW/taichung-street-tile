@@ -4,7 +4,7 @@ RUN echo "deb http://ftp.tw.debian.org/debian jessie-backports main" >> /etc/apt
 RUN apt-get update && \
     apt-get install -y libmapnik3.0 mapnik-utils \
     fonts-noto-cjk libgeos-dev libgdal-dev libproj12 \
-    python-pip python-imaging python-yaml python-shapely \
+    python-pip python-imaging python-yaml python-shapely python-mapnik \
     uwsgi uwsgi-plugin-python && \
     rm -rf /var/lib/apt/lists/*
 RUN pip install MapProxy==1.11.0
